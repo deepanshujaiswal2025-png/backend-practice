@@ -2,5 +2,26 @@
   "dependencies": {
     "express": "^5.2.1",
     "http": "^0.0.1-security"
-  }
+  },
+  "name": "backend-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepanshujaiswal2025-png/backend-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "modulejs",
+  "bugs": {
+    "url": "https://github.com/deepanshujaiswal2025-png/backend-practice/issues"
+  },
+  "homepage": "https://github.com/deepanshujaiswal2025-png/backend-practice#readme"
 }
