@@ -19,7 +19,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "modulejs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/deepanshujaiswal2025-png/backend-practice/issues"
   },
