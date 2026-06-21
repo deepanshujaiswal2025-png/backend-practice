@@ -23,6 +23,14 @@ app.post('/', (req, res)=>{
     })
 })
 
+app.put('/', (req, res) => {
+    const data = req.body;
+    res.send({
+        message: "Data updated successfully",
+        updatedData: data
+    });
+});
+
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
 })

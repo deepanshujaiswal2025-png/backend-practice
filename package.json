@@ -7,10 +7,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "npx nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/deepanshujaiswal2025-png/backend-practice/issues"
   },
-  "homepage": "https://github.com/deepanshujaiswal2025-png/backend-practice#readme"
+  "homepage": "https://github.com/deepanshujaiswal2025-png/backend-practice#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }

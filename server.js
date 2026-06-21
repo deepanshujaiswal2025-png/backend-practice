@@ -1,27 +1,11 @@
-// import os from 'os';
-// console.log(`Running on ${os.platform()} platform`);
+import http from 'node:http';
 
+const server= http.createServer((req,res)=>{
+    console.log("Starting server...");
+    res.writeHead(200,{"Content-Type":"text/html"});
+    res.end("<h1>Hello, Node.js!!</h1>");
+})
 
-
-// import http from 'http';
-
-// const server = http.createServer((req, res) =>{
-//     res.writeHead(200, {'Content-Type': 'text/plain'});
-//     res.end('This is a Node.js server');
-// })
-
-// server.listen(3000, () => {
-//     console.log('Server is running on port 3000');
-// })
-
-import express from 'express';
-
-const app = express();
-
-app.get('/', (req, res) => {
-    res.send('Hello, this is an Express server!');
-});
-
-app.listen(3000, () => {
-    console.log('Express server is running on port 3000');
-});
+server.listen(3000,()=>{
+    console.log("Server is running on port 3000");
+})

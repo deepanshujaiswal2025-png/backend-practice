@@ -1,8 +1,8 @@
-import * as fs from 'node:fs';
+import * as fs from 'node:fs/promises';
 
-function createFile(pathname){
-    fs.writeFileSync(pathname, "Hello, Node.js!!");
-    fs.appendFileSync(pathname, "Hello, Javascript!!"); //overwrites
+async function createFile(pathname){
+    await fs.writeFile(pathname, 'Hello Node.js\n')
+    await fs.appendFile(pathname, 'Hello Javascript!!\n')
     console.log("File created successfully!");
 }
 createFile('./hello.txt');
