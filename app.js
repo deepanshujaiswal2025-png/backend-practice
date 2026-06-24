@@ -1,36 +1,18 @@
 import express from 'express';
-import router from './router.js'
+import {userFunction, searchFunction} from './controller.js';
 
 const app = express();
+
 const PORT = 3000;
 
-app.use(express.json())
-
-app.get('/', (req,res)=>{
-    res.send({
-        message:'Hello, World',
-        name: "deepanshu",
-        error: "no error"
-    });
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
 })
 
-app.post('/', (req, res)=>{
-    const data= req.body
-    console.log(data.name)
-    res.send({
-        message: "data received", 
-        data
-    })
-})
+app.get('/user/:username', userFunction)
 
-app.put('/', (req, res) => {
-    const data = req.body;
-    res.send({
-        message: "Data updated successfully",
-        updatedData: data
-    });
-});
+app.get('/search', searchFunction)
 
-app.listen(PORT, ()=>{
-    console.log(`Server is running on port ${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server is listening at port ${PORT}`);
 })

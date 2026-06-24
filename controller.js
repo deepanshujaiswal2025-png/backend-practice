@@ -1,6 +1,9 @@
-export const  userLogin =(req, res)=>{
-    res.send('Login page')
+export const userFunction = (req, res) => {
+    const username = req.params.username;
+    res.send(`<h1> Hello, ${username} </h1>`);
 }
-export const userSignup= (req, res)=>{
-    res.send('Signup page')
+
+export const searchFunction = (req, res) => {
+    const keyword = req.query.keyword;
+    res.send(`<h1> Searching for ${keyword}...</h1>`);
 }
