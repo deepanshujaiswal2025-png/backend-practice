@@ -5,19 +5,13 @@ const app = express();
 
 const PORT = 3000;
 
-app.use((req,res,next) => {
-    console.log('A new request received at '+Date.now());
-    next();
-})
+//Set EJS as view engine
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.send('Hello, World!');
+    const userName = 'Elon Musk';
+    res.render('index', {userName});
 })
-
-app.get('/user/:username', userFunction)
-
-app.get('/search', searchFunction)
-
 app.listen(PORT, () => {
     console.log(`Server is listening at port ${PORT}`);
 })
