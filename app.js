@@ -1,25 +1,14 @@
 import express from 'express';
-import multer from 'multer';
+import cookieParser from 'cookie-parser';
 
 const app = express();
-const upload = multer();
-
 const PORT = 3000;
 
-app.use(express.urlencoded({extended:true}));
-app.use(upload.array());
+app.use(cookieParser());
 
 app.get('/', (req, res) => {
-    res.send('Hi, this is an Express server');
-})
-
-app.post('/', (req, res) => {
-    
-})
-
-app.post('/form', (req, res) => {
-    console.log(req.body);
-    res.send('Form received');
+    res.cookie('name', 'backend-practice');
+    res.send('Hello world');
 })
 
 app.listen(PORT, () => {

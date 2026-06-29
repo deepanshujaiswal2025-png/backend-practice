@@ -1,0 +1,10 @@
+{
+    "name": "deepanshu",
+    "age" : 19,
+    "university": "vit",
+    "grades": {
+        "A":10,
+        "B":9,
+        "C": 8
+    }
+}
